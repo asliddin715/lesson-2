@@ -178,3 +178,11 @@ select {
   background-color: #76DE37;
   border-radius: 10px;
 }
+
+.addForm{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 766px;
+  margin: 0 auto;
+}
