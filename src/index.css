@@ -22,9 +22,11 @@ a {
   color: #666666;
   text-decoration: inherit;
 }
+
 a:hover {
   color: #535bf2;
 }
+
 a.active {
   color: #535bf2;
 }
@@ -57,9 +59,11 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
@@ -78,10 +82,99 @@ select {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
+
   button {
     background-color: #f9f9f9;
   }
+}
+
+.cont {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.todo img {
+  width: 580px;
+}
+
+.sign{
+  width: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FFF9F9;
+  height: 720px;
+  border-radius: 40px;
+}
+
+#userName, #password{
+  width: 301px;
+  border-radius: 7px;
+  background-color: #FFF9F9;
+ 
+}
+.form-cont{
+  margin: 0 auto;
+}
+.btn-log{
+  background-color: #76DE37;
+  border-radius: 10px;
+  padding: 10px 125px;
+}
+.line-cont{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.icon-cont{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.google{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #EBEBEB;
+  gap: 8px;
+  border-radius: 8px;
+  padding: 5px 20px;
+}
+.google h4{
+  margin: 0;
+}
+.par{
+
+  text-align: center;
+}
+
+.const{
+  margin: 0 auto;
+  width: 491px;
+  text-align: center;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.const h2{
+  margin: 0;
+}
+
+.todo-btn{
+  width: 218px;
+  margin: 0 auto;
+  background-color: #76DE37;
+  border-radius: 10px;
 }

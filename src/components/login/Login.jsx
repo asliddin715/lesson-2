@@ -37,7 +37,7 @@ export default function Login() {
       const user = await response.json();
       setUser(user);
       saveUser(user);
-      navigate("/"); 
+      navigate("/");
     } catch (error) {
       console.error(error);
       setError(error);
@@ -52,37 +52,64 @@ export default function Login() {
   }
 
   return (
-    <div className={styles.login}>
-      <h2>Log In</h2>
-      <form onSubmit={handleSubmit}>
-        <div className={styles["form-control"]}>
-          <label htmlFor='userName'>Username</label>
-          <input
-            type='text'
-            value={userName}
-            id='userName'
-            required
-            onChange={(e) => setUserName(e.target.value)}
-          />
-        </div>
-        <div className={styles["form-control"]}>
-          <label htmlFor='password'>Password</label>
-          <input
-            type='password'
-            value={password}
-            id='password'
-            required
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
+    <div className="cont">
+      <div className="todo">
+        <img src="r.png" alt="loading" />
+      </div>
 
-        {error && <p className={styles.error}>Error: {error.message}</p>}
-        <div>
-          <button type='submit' disabled={loading}>
-            {loading ? "Loading..." : "Submit"}
-          </button>
+      <div className="sign">
+
+        <div className="form-cont">
+          <h2 className="text">Sign in</h2>
+          <form onSubmit={handleSubmit}>
+            <div className={styles["form-control"]}>
+
+              <input
+                type='text'
+                value={userName}
+                id='userName'
+                required
+                onChange={(e) => setUserName(e.target.value)}
+              />
+            </div>
+            <div className={styles["form-control"]}>
+
+              <input
+                type='password'
+                value={password}
+                id='password'
+                required
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+
+            {error && <p className={styles.error}>Error: {error.message}</p>}
+            <div>
+              <button className="btn-log" type='submit' disabled={loading}>
+                {loading ? "Loading..." : "Sign In"}
+              </button>
+            </div>
+          </form>
+          <div className="line-cont">
+            <img src="li.svg" alt="loading" />
+            <h3>or</h3>
+            <img src="li.svg" alt="loading" />
+          </div>
+          <div className="icon-cont">
+            <div className="google">
+              <img src="google.svg" alt="laoding" />
+              <h4>Google</h4>
+            </div>
+            <div className="google">
+              <img src="face.svg" alt="laoding" />
+              <h4>Facebook</h4>
+            </div>
+          </div>
+            <div className="par">
+              <p>Don't have an account? Sign Up</p>
+            </div>
         </div>
-      </form>
+      </div>
     </div>
   );
 }
